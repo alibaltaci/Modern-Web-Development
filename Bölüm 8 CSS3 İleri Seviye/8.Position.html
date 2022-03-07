@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS - Position</title>
+    <style> 
+
+    /* 
+        Oluşturduğumuz bir barın sayfayı aşağı yukarı hareketinde sabit kalmasını istersek
+
+        position: fixed; özelliğini kullanmak gerekir.
+
+        -----------------------------------------------------------------------------------------
+
+        Burada 2 özelliğimiz var Relative ve Absulate (position özelliği için)
+
+        position özelliğini ön tanımlı değeri "static"tir.
+
+        Relative elemanın bulunduğu yerden pozisyonlanma durumunu ayarlar.
+
+        Absulate konumlandırma yaparken içinde bulunduğu kapsayıcıya göre işlemleri yapar.
+        Absulate özelliğini kullandığımız elemanın kapsayıcı elemanının da position özellği static ten farklı bir değerde olmalıdır.
+        Eğer kapsayıcı elemanda bu özellik belirtilmemiş ise bir üst elemana gider ve bunu elemanı esas alarak işlemleri gerçekleştirir. 
+    */
+
+
+
+      span {
+        width: 50px;
+        height: 50px;
+        display: inline-block;
+        background-color: red;
+        position: relative;
+        left: 75px;
+        z-index: -1;
+      }
+
+        /* Position: relative ile relativ özelliğine göre pozisyonlama yapmak istediğimiz belirtiyoruz.
+        
+           left - right - top - bottom ile ayarlamaları yapabilriz.
+           
+           z-index ile 3. boyutta bir işlem yapabiliriz. Hangi elemanınımızı önde görmek istersek ona daha büyük bir z-index değeri vermeeliyiz.
+           ön tanımlı değeri 0 dır.
+           Sayfaya ilk gelen eleman ayarlama yapılmadığı takdirde arkada kalır.
+           */
+
+
+      .outer-box {
+        width: 200px;
+        height: 200px;
+        background-color: #a7a7a7;
+        position: relative;
+
+        left: 100px;
+        top: 100px;
+      }
+      .inner-box {
+        width: 50px;
+        height: 50px;
+        background-color: blue;
+        position: absolute;
+        right: 10px;
+        top: 10px;
+      }
+      .red {
+        width: 100px;
+        height: 100px;
+        background-color: red;
+        position: relative;
+        top: 20px;
+        left: 20px;
+      }
+      .blue {
+        width: 100px;
+        height: 100px;
+        background-color: blue;
+        position: relative;
+        left: 5px;
+        top: 5px;
+        z-index: -1;
+      }
+      /* .fixed-topbar {
+        width: 50%;
+        padding: 20px;
+        background-color: black;
+        color: white;
+        text-align: center;
+        position: fixed;
+        bottom: 20px;
+      } */
+    </style>
+  </head>
+  <body>
+    <span>ergaref</span>
+
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime, doloribus?
+    <div class="outer-box">
+      <div class="inner-box"></div>
+    </div>
+    <div class="red"></div>
+    <div class="blue"></div>
+  </body>
+</html>
