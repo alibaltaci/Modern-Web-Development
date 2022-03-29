@@ -1,2 +1,0 @@
-// Ecmascript Nedir?
-
