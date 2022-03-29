@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Width,Height, Max-Width</title>
+
+    <style>
+      div#box-1 {
+        max-width: 700px;
+        height: 100px;
+        background: #a7a7a7;
+      }
+
+      /* Bir kutu oluşturmak için width ve heigth ı kullanabiliriz.
+         
+         Sayfayı küçülttüğümüzde kutunun boyutu aynı kalmaya devam eder.
+
+         Sayfayı kutumuzun yani tanımladığımız divin pixelinden daha küçük hale getirirsek, kutu sabit kalmaya devameder 
+         ve sayfanın altında bir scroll çıkar. İleri geri giderek kutuyu görmemizi sağlar.
+
+         max-width ile kutumuzun ulaşacağı max değeri tanımlayabiliriz. 
+         Sayfa küçüldüğünde kutu kuçülebilir fakat büyüdüğünde kutu en fazla belirlediğimiz değere ulaşabilir.
+         
+         
+      */
+         
+
+
+
+      /* div#box-2 {
+        width: 50%;
+        height: 50px;
+        background: red;
+      } */
+
+      /* 100px değerler verilebileeği gibi 50% gibi değerler de verilebilir.
+
+        Değer atadığımız etiket hangi etiketin altında ise onun belirttiğimiz kadar yüzdesini kaplar.
+
+        width: 50%; demek div etiketinin içinde olduğu div etiketinin yarısını kaplaması demeketir.
+
+        Bu şekilde atama yapıldığımda sayfa küçülürken kutumuz da aynı oranda küçülür. 
+      */
+
+    </style>
+  </head>
+  <body>
+    <div id="box-1">
+      <!-- <div id="box-2"></div> -->
+    </div>
+  </body>
+</html>

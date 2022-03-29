@@ -1,0 +1,50 @@
+Api Nedir?
+
+- Application Programming Interface (API)
+- Bir uygulamanın birtakım fonksiyonlarının başka uygulamalar tarafından kullanılmasını sağlayan arayüz.
+- Örnek: Github API
+-Request ve Response (İstek ve Cevap)
+
+           reqest-->
+- Your app - API - Their App
+           <---Data
+
+
+Rest API Nedir?
+
+-Web Applicationlar arasında iletişim sağlamak için kullandığımız bir API türüdür.
+-Burada rest mimarisini kullanıyoruz - Bunun yanında soap mimarisi de vardır. -Sonra araştırılabilir.
+-Representational State Transfer
+
+Rest Avantajları
+-Oldukça hızlıdır (İstek-Dönüş)
+
+Rest Yapısı
+-Stateless bir yapısı vardır. (Araştırılacak.)
+-Herhangi bir state tutmaması anlamına gelir.
+-Örnek:
+-Bir kullanıcı bir API den rest ile istekte bulunursa kullanıcının önceki istekleri kaydedilmez.
+-Sadece kullanıcının isteklerini döner.
+-Hızlı olmasının sebebi de budur.
+
+-Genelde Http isteklerinde bulunuruz.
+-(Get, post, put, delete)
+-İstekler sonucunda Rest API bize genellikle JSON objesi döndürür.
+
+-Rest API birçok programlama dili ile birlikte kullanılabilir.
+
+-API'ler geliştiriciler tarafından yazıldığı için API'lerin yapısı değişebilir.
+-Bu yüzden her API'yi tanımamız gerekir.
+
+
+HTTP İstekleri
+
+GET: Endpoint'e (url) göre belli veriyi alır.
+
+POST: Endpoint'e (url) göre belli bir veriyi gönderir.
+        
+        -Gönderdiğimiz veriyi api kaydederse yeni bir POST'umuz olmuş oluyor.
+
+PUT: Endpoint!e (url) göre belli bir veriyi günceller.
+
+DELETE: Endpoint'e (url) göre belli bir veriyi siler.

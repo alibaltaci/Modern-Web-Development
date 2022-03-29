@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS - Flexbox</title>
+
+    <!-- 
+        Flexbox (Esnek Kutu Modeli)
+        --------------------------
+        CSS--tricks:
+        https://css-tricks.com/snippets/css/a-guide-to-flexbox/
+
+        Container: Bir kapsayıcı görevi görür. İçerisindeki "itemları" kolayca konumlandırabiliriz.
+
+        Items: Container içerisine koyabildiğimiz kutucuklar olarak adlandırabiliriz. Contianer'ın cihld larıdır.
+
+        main axis: containera göre yatak konumlu ekseni ifade eder. (Ana Eksen)
+
+        cross axis: Dikey yani yukarıdan aşağıya doğru olan eksenimizdir.
+
+        main start: main axisin başladığı yerdir.
+
+        main end: main axisin bittiği yer.
+
+        main size: main axisin genişliği.
+
+        cross start: cross axisin başlama noktası.
+
+        cross end: cross axis in bitiş noktası olarak kabul edilir.
+
+        cross size: cross axisin uzunluğudur.
+
+
+     -->
+
+
+
+
+
+
+    <style>
+
+
+        /*  Flex Container
+            ---------------
+
+            display: flex; özelliği sayesinde bir flexbox tanımlayabiliyoruz. 
+            
+            flex-direction: ile kutuların nereden nereye (yukarıdan-aşağı, sağdan-sola vb...) sıralanacağını belirtebiliriz. (row - column - row-reverse - column-reverse)
+            ön tanımlı değeri "row" dur. 
+            
+            Container içindeki kutulara hight vermezsek kutuların uzunluğu container uzunluğu kadar otomatik olarak uzar.
+            
+            justify-content yatayda konumlandırma yapmak için kullanılır. Ön tanımlı değeri flex-start tır. (Soldan sağ)
+            
+                - flex-end ile sağdan sola
+                - center ortaya getirir.
+                - space-between ilk kutuyu sola yaslar, son kutuyu sağa yaslar ve tüm kutular arasında eşit mesafe bırakarak sıralama yapar.
+                - space-around kutuları yaslamaz. Container ile kutu arasında belirli bir boşluk bırakır ve diğer kutuların da arasında eşit
+                  boşluk bırakarak sıralama yapar. (kutuların kendi arasında bırakılan boşluk container ile kutu arasındaki mesafenin 2 katıdır.)
+                - space-evenly ile tüm kutular ve container arasındaki mesafe eşit olur.
+            
+            NOT: flex-direction: columns; olduğunda yukarıdaki özellikler terse döner.    
+
+
+            align-items kutuları yukarıdan aşağıya hizalamak için kullanılır. Ön tanımlı değeri 
+                - strech; yukraında aşağıya container boyu kadar kutuyu uzatır.
+                - center; containerın yukrarısından ve aşağısından başluklar bırakarak kutuları hizalar.
+                - flex-start; sol üst köşeden başlayarak hizalama yapar.
+                - flex-end; sol alt köşeden.
+            
+            flex-wrap container içindeki elemanları bir satıra sığdırmayı zorlamak ya da engenlemek için kullanabiliriz. (nowrap ön tanımlı değeridir.)
+            
+                - nowrap; kutuları tek satıra sığdırmaya çalışır, yer kalmadığında kutulara verdiğimiz boyutları küçülterek sığdırma işlemide devam eder.
+                - wrap; sığmayan elemanın alt satırdan başlayarak devam etmesini sağlar.
+                
+            min-height minumum bir yüksekli belriler ve eklediğimiz elemanşarın boyutu containerın dışına taşmaya başlarsa, contianer 
+            boyutunu arttırabilir.
+            
+            
+
+
+            flex-direction ve flex-wrap kuralları, flex-flow kısa yazım kuralı ile birlikte yazılabilirler. Bu kısa yazım kuralı, iki kuralın değerlerini aralarında boşluk ile birlikte alır.
+
+            Örneğin, flex-flow: row wrap kuralı ile row ve wrap değerlerini aynı anda verebilirsiniz.
+
+
+            flex-content:
+            -------------
+
+            flex-start: Satırlar flex container'ın tepesinde toplanır.
+            flex-end: Satırlar flex container'ın aşağısında toplanır.
+            center: Satırlar flex container'ın dikey ortasında toplanır.
+            space-between: Satırlar aralarında eşit boşluk kalacak şekilde yayılırlar.
+            space-around: Satırlar etraflarında eşit boşluk kalacak şekilde yayılırlar.
+            stretch: Satırlar flex container'ı kaplamak için uzarlar.
+
+            Bu kafa karıştırıcı olabilir, ama align-content satırlar için aralıkları belirlerken, 
+            align-items öğlerin flex container içerisinde beraberce nasıl hizalanacağını belirler. 
+            Eğer tek satır varsa, align-content kuralının bir etkisi yoktur.
+
+
+
+            
+            Flex Items
+            -----------
+
+            order özelliği ile kutukarın sıralamasını değiştirebiliriz.
+
+            align-self özelliği kutunun konumu diğer kutulardan bağımsız şekilde belirleyebiliyoruz.
+            Diğer kutulara container kısmında bir konum vermişsek dahi bu özellik sayesinde seçili kutumuzu 
+            bundan muaf tutuyor ve istediğimiz değeri verebiliyoruz.
+
+             flex-grow özelliği ile kutularıma oran verip container ımızı doldurmasını sağlayabliriz.
+             box-1   flex-grow: 1;   1/6
+             box-2   flex-grow: 2;   2/6
+             box-3   flex-grow: 3;   3/6
+             verdiğimiz değerler toplanıp kutular kendi değerleri ile aynı oranda kutuda yer tutacaklardır.
+
+                - Tek bir kutuya bu özelliği atarsak boş olan alanı sadece atama yaptığımız kutucuk dolduracaktır.
+                - flex: 1; ile de aynı işlemi yapabiliriz. Burada yanına farklı özelliklerde gelebilir fakat şuan bunları görmeyeceğiz.
+                
+
+
+            
+            */
+
+     * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body{
+        background-color: darkorchid;
+      }
+
+      .container {
+        width: 75%;
+        margin: 0 auto;
+        margin-top: 30px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        min-height: 600px;
+        background: rgba(0, 0, 0, 0.925);
+        border-radius: 10px;
+      }            
+
+      .container-in{
+        margin-left: 110px;
+        display: flex;
+        flex-wrap: wrap;
+      }
+
+      .box {
+        text-align: center;
+        background: #f2f2f2;
+        width: 200px;
+        height: 200px;
+        border: 1px solid black;
+        margin-top: 10px;
+        margin-left: -100px;
+        border-radius: 10px;
+      }
+
+      .box:hover{
+        background-color: aquamarine;
+        border: 2px solid rgb(55, 11, 175);
+        margin-left: 10px;
+        margin-right: 110px;
+        width: 300px;
+        height: 300px;
+      }
+
+
+    </style>
+  </head>
+  <body>
+    <!-- Flex Container -->
+    <div class="container">
+      <div class="container-in">
+        <div class="box">
+          <h1>Article 1</h1>
+          <p>Lorem ipsum dolor sit amet.</p>
+        </div>
+
+        <div class="box">
+          <h1>Article 2</h1>
+          <p>Lorem ipsum dolor sit amet.</p>
+        </div>
+
+        <div class="box">
+          <h1>Article 3</h1>
+          <p>Lorem ipsum dolor sit amet.</p>
+        </div>
+        <div class="box">
+          <h1>Article 3</h1>
+          <p>Lorem ipsum dolor sit amet.</p>
+        </div>
+        <div class="box">
+          <h1>Article 3</h1>
+          <p>Lorem ipsum dolor sit amet.</p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
