@@ -6,12 +6,9 @@ const nameSecond = document.getElementById("couple-name-second");
 
 const calcBtn = document.querySelector(".btn");
 
-const resultPer = document.getElementById("result-per");
-
-const resultMessage = document.getElementById("result-message");
-
 const love = new LOVE();
 
+const ui = new UI();
 
 // eventListeners();
 
@@ -30,16 +27,16 @@ function result(e){
 
     let coupleNameSecond = nameSecond.value.trim();
 
-    console.log(coupleNameFirst, coupleNameSecond);
-
     if(coupleNameFirst === "" && coupleNameSecond === ""){
-        // mesaj
+        // ui.showError("Lütfen ")
     }
     else{
         love.getResult(coupleNameFirst, coupleNameSecond)
-        .then(result => console.log(result))
+        .then(response => ui.addResultsToUI(response))
         // .catch(err => reject(err));
     }
+
+    ui.clearInputs();
 
     e.preventDefault();
 }
