@@ -13,24 +13,33 @@ const resultMessage = document.getElementById("result-message");
 const love = new LOVE();
 
 
-eventListeners();
+// eventListeners();
 
-function eventListeners(){
+// function eventListeners(){
 
-    calculateForm.addEventListener("submit", result);
+//     calculateForm.addEventListener("submit", result);
 
-}
+// }
+
+calculateForm.addEventListener("submit", result);
 
 
 function result(e){
-
-    console.log("deneme");
 
     let coupleNameFirst = nameFirst.value.trim();
 
     let coupleNameSecond = nameSecond.value.trim();
 
     console.log(coupleNameFirst, coupleNameSecond);
+
+    if(coupleNameFirst === "" && coupleNameSecond === ""){
+        // mesaj
+    }
+    else{
+        love.getResult(coupleNameFirst, coupleNameSecond)
+        .then(result => console.log(result))
+        // .catch(err => reject(err));
+    }
 
     e.preventDefault();
 }
