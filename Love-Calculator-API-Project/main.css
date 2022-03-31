@@ -74,6 +74,54 @@ body{
     background-color: red;
 }
 
+#results-area{
+    margin: 3rem;
+}
+
+#resultsHeader{
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    color: red;
+    font-size: 2rem;
+    text-align: center;
+}
+
+#results{
+    display: flex;
+}
+
+#percentage-box{
+    font-size: 4rem;
+    color: rgb(211, 84, 0);
+    text-align: center; 
+    margin-right: 3rem;
+}
+
+#percentage-box span{
+    font-size: 10rem;
+}
+
+hr{
+    width: 3px;
+    background-color: rgb(211, 84, 0);
+    border: none;   
+}
+
+#result-message{
+    display: flex;
+    align-items: center;
+}
+
+#message-box{
+    font-size: 2rem;
+    color: rgb(211, 84, 0);
+    min-width: 16em;
+    height: 4em;
+    padding-top: 3rem;
+    text-align: center;
+}
+
+
 #Warning-area{
     margin-bottom: 0;
     color: yellow;
