@@ -75,6 +75,11 @@ body{
 }
 
 #results-area{
+    width: 80%;
+}
+
+#results{
+    min-width: 20rem;
     margin: 3rem;
 }
 
@@ -90,8 +95,12 @@ body{
     display: flex;
 }
 
+#result-per{
+    min-width: 40%;
+}
+
 #percentage-box{
-    font-size: 4rem;
+    font-size: 2rem;
     color: rgb(211, 84, 0);
     text-align: center; 
     margin-right: 3rem;
@@ -115,8 +124,9 @@ hr{
 #message-box{
     font-size: 2rem;
     color: rgb(211, 84, 0);
-    min-width: 16em;
+    min-width: 12em;
     height: 4em;
+    padding-left: 2rem;
     padding-top: 3rem;
     text-align: center;
 }
