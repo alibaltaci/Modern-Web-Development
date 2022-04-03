@@ -20,5 +20,9 @@
   },
   "devDependencies": {
     "webpack-cli": "^4.9.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/alibaltaci/My-First-NPM-Pack.git"
   }
 }
