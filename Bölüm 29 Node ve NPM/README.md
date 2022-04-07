@@ -43,7 +43,8 @@
 - ! Windows'da node_modules'ün nerede olduğunu sistem değişkenlerine eklememiz gerekir.
 
   --> ```Dosya gezgini --> Bu bilgisayar --> Gelişmiş sistem ayarları --> Ortam değişkenleri --> Yeni (Windows'un global değişkenleri bulması için path ekleme)
-  --> NODE_PATH (Değişken adı) (Büyük harfle) --> Değişken --> Klasör yolunu yapıştır.```
+  --> NODE_PATH (Değişken adı) (Büyük harfle) --> Değişken --> Klasör yolunu yapıştır.
+  ```
 
 - ! Paketi Global olarak kurmak için:
 
@@ -63,7 +64,8 @@
 
   -->` npm init` ile oluşturulur.
 
-    ```>> package name: (paket ismi - eğer bu paket npm 'de yayınlanacaksa isim benzersiz olmalıdır.)
+    ```
+    >> package name: (paket ismi - eğer bu paket npm 'de yayınlanacaksa isim benzersiz olmalıdır.)
     
     >> description: 
 
@@ -77,7 +79,8 @@
 
     >> lisance: "ISC"
 
-    >> is this OK?: (YES)```
+    >> is this OK?: (YES)
+    ```
 
 - Paket oluşturulduktan sonra script altına kodların kısaltmaları yazılabilir.
 
@@ -121,10 +124,12 @@ DEVELOPMENT DEPENDENCIES
 
 - package.json içinde yeni "repository" adında bir bölüm oluşturuyoruz.
 
-   ``` "repository":{
+   ``` 
+   "repository":{
         "type" : "git",
         "url" : "repository-url"
-    }```
+    } 
+    ```
 
 
 MPM PAKETİ EKLEME - SİLME
@@ -133,13 +138,15 @@ MPM PAKETİ EKLEME - SİLME
 
 - Npm paket ekleme 
 
-   ``` >> cmd --> npm login 
+   ``` 
+   >> cmd --> npm login 
 
     >> username:
 
     >> password:
 
-    >> npm publish ```
+    >> npm publish 
+    ```
 
 - Npm üzerinde paket silme
 
