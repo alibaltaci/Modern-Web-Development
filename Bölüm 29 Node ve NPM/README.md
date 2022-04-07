@@ -1,4 +1,4 @@
-NODE JS
+# NODE JS
 
 - cmd üzerinden node -v ile versiyon kontrolü yapılabilir.
 
@@ -19,12 +19,12 @@ NODE JS
 
 - Paket indirme 
 
-  --> npm install <paket ismi>  (install yerine i şeklinde kısa yazım da mevcuttur.)
+  --> `npm install <paket ismi> ` (install yerine i şeklinde kısa yazım da mevcuttur.)
 
   --> indirilen paket node_modules adı altında çalışma dosyasında yer alır.
 
 
-NPM GLOBAL VE YEREL paketler
+# NPM GLOBAL VE YEREL paketler
 
 - Yerel paketler sadece indirildikleri klasör içinde kullanılabilirler.
 
@@ -32,7 +32,7 @@ NPM GLOBAL VE YEREL paketler
 
 - Paketlerin nerede yer aldığını görmek için 
   
-  -> cmd --> npm root -g
+  ->` cmd --> npm root -g`
 
 - ! Ürün kısmına çıkacağımız zaman global paketler kendi bilgisayarımızda olduğu için server tarafında olmayacaktır. Bu durum bize sıkıntı çıkartır.
 
@@ -42,16 +42,16 @@ NPM GLOBAL VE YEREL paketler
 
 - ! Windows'da node_modules'ün nerede olduğunu sistem değişkenlerine eklememiz gerekir.
 
-  --> Dosya gezgini --> Bu bilgisayar --> Gelişmiş sistem ayarları --> Ortam değişkenleri --> Yeni (Windows'un global değişkenleri bulması için path ekleme)
-  --> NODE_PATH (Değişken adı) (Büyük harfle) --> Değişken --> Klasör yolunu yapıştır.
+  --> ```Dosya gezgini --> Bu bilgisayar --> Gelişmiş sistem ayarları --> Ortam değişkenleri --> Yeni (Windows'un global değişkenleri bulması için path ekleme)
+  --> NODE_PATH (Değişken adı) (Büyük harfle) --> Değişken --> Klasör yolunu yapıştır.```
 
 - ! Paketi Global olarak kurmak için:
 
-  --> npm install -g <paket adı>
+  --> `npm install -g <paket adı>`
 
 - Bu işlemler yapıldığında önce gider kendi node_modules 'üne bakar, orada bulamazsa Global 'e bakar.
 
-KENDİ PAKETİMİZİ OLUŞTURMA
+# KENDİ PAKETİMİZİ OLUŞTURMA
 
 - Package.json : JS dosyalarımızın Manifesto dosyası olarka düşünülebilir.
 
@@ -61,9 +61,9 @@ KENDİ PAKETİMİZİ OLUŞTURMA
 
   --> Çalışmamızın hangi paketlere bağımlı olduğunu ve diğer extra özellikleri bu dosyamızın içine yazarız.
 
-  --> npm init ile oluşturulur.
+  -->` npm init` ile oluşturulur.
 
-    >> package name: (paket ismi - eğer bu paket npm 'de yayınlanacaksa isim benzersiz olmalıdır.)
+    ```>> package name: (paket ismi - eğer bu paket npm 'de yayınlanacaksa isim benzersiz olmalıdır.)
     
     >> description: 
 
@@ -77,20 +77,20 @@ KENDİ PAKETİMİZİ OLUŞTURMA
 
     >> lisance: "ISC"
 
-    >> is this OK?: (YES)
+    >> is this OK?: (YES)```
 
 - Paket oluşturulduktan sonra script altına kodların kısaltmaları yazılabilir.
 
-  --> "Ali" : "echo `Benim adım Ali`"
+  --> ``"Ali" : "echo `Benim adım Ali`"``
 
 - Yazdığımız script 'i çalıştırmak için.
 
-  --> cmd --> npm run <kısaltma>
+  --> `cmd --> npm run <kısaltma>`
 
 
-PAKET EKLEME 
+# PAKET EKLEME 
 
-- npm install <paket adı>
+- `npm install <paket adı>`
 
 - Çalışmamızda hangi kullanıyorsak tüm paket isimleri package.json 'ın dependencies kısmına eklenir.
 
@@ -101,7 +101,7 @@ PAKET EKLEME
 - dependencies sayesinde kullanılan paketler bilindiği için node_modules dosyasını silebiliriz. Çalışmayı kullanacak olanlar
   bu paketleri kendileri indirebilirler.
 
-- cmd --> npm install (dependencies içine bakarak tüm paketleri indirir.)
+- `cmd --> npm install` (dependencies içine bakarak tüm paketleri indirir.)
 
 - Paketleri sildikten sonra refresh etmeyi unutma.
 
@@ -114,17 +114,17 @@ DEVELOPMENT DEPENDENCIES
 
 - Development Dependencies olarak paket ekleme
 
-  --> npm install webpack-cli --save -dev
+  -->` npm install webpack-cli --save -dev`
 
 
 ÇALIŞMAYI GITHUB 'A EKLEME
 
 - package.json içinde yeni "repository" adında bir bölüm oluşturuyoruz.
 
-    "repository":{
+   ``` "repository":{
         "type" : "git",
         "url" : "repository-url"
-    }
+    }```
 
 
 MPM PAKETİ EKLEME - SİLME
@@ -133,17 +133,17 @@ MPM PAKETİ EKLEME - SİLME
 
 - Npm paket ekleme 
 
-    >> cmd --> npm login 
+   ``` >> cmd --> npm login 
 
     >> username:
 
     >> password:
 
-    >> npm publish 
+    >> npm publish ```
 
 - Npm üzerinde paket silme
 
-    >> npm unpublish <paket> --force
+   `>> npm unpublish <paket> --force`
 
 
 
