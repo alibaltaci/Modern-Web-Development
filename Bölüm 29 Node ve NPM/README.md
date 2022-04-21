@@ -26,7 +26,7 @@
 
 # NPM GLOBAL VE YEREL paketler
 
-- Yerel paketler sadece indirildikleri klasör içinde kullanılabilirler.
+- Yerel paketler sadece indirildikleri klasör içinde kullanılabilir.
 
 - Birden fazla kullanılacak paketler her seferinde indirmek yerine global olarak kullanılabilir.
 
@@ -95,7 +95,7 @@
 
 - `npm install <paket adı>`
 
-- Çalışmamızda hangi kullanıyorsak tüm paket isimleri package.json 'ın dependencies kısmına eklenir.
+- Çalışmamızda kullandığımız tüm paket isimleri package.json 'ın dependencies kısmına eklenir.
 
 - Dependencies sayesinde kullandığımız paketler açıkca belirtilir.
 
@@ -113,7 +113,7 @@ DEVELOPMENT DEPENDENCIES
 
 - Dependencies kısmında olanlar hem geliştirme hem de production kısmında kullanılabilir.
 
-- Dev-dependencies : Sadece geliştirme ortamında kullanıla paketler.
+- Dev-dependencies : Sadece geliştirme ortamında kullanılan paketler.
 
 - Development Dependencies olarak paket ekleme
 
