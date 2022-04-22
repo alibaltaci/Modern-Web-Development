@@ -16,7 +16,7 @@ BABEL
 
 Babel 'i Projelerde Kullnma
 
-- Globalde babel kullanmıyırsak kendi babal 'imizi localde kullanmamız gerek.
+- Globalde babel kullanmıyorsak kendi babel 'imizi localde kullanmamız gerek.
 
 - Babel 'i Cli 'de kullanabilmek için
 
@@ -63,13 +63,13 @@ WEBPACK
 
 - İlk olarak babel eklenir sonra ilişki kurulur.
 
-- Burada babel/cli indirmeye gerek yok çünkü babel babel webpack ile iletişim kuracak ve babel 'i kendisi çalıştıracak.
+- Burada babel/cli indirmeye gerek yok çünkü babel, babel webpack ile iletişim kuracak ve babel 'i kendisi çalıştıracak.
 
 - Webpack ile babel arasındaki ilişkiyi sağlamak için babel-loader indireceğiz.
 
 - Yukarıdakiler indirildkten sonra webpack indirme işlemleri yapılır.
 
-    --> cmd --> npm install webpack/cli webpack --save -dev (common line'da kullanablmek için)
+    --> cmd --> npm install webpack/cli webpack --save -dev (common line'da kullanabilmek için)
 
 - src (source) klasörü oluştur.
 
