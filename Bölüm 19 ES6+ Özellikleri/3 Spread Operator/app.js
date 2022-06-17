@@ -1,5 +1,7 @@
 //  Spread Operator
 
+// https://prototurk.com/makaleler/javascript-es6-spread-operatoru#:~:text=Spread%20t%C3%BCrk%C3%A7e%20kar%C5%9F%C4%B1l%C4%B1k%20olarak%20yaymak,Map%20Set%20DOM%20NodeList%20vb.
+
 // ex1:
 
 // const langs = ["Python","Java","C++","Php"];
