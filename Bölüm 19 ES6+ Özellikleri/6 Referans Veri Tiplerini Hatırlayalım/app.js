@@ -1,5 +1,6 @@
 //  Referans Veri Tiplerini Hatırlayalım
 
+// https://gurolayanlar.com/reference-primitive-degerler-tipler/
 
 // Prim veri tipleri
 
