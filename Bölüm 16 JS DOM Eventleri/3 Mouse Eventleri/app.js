@@ -4,6 +4,7 @@ const title = document.querySelector("#tasks-title");
 
 // Click Event
 // title.addEventListener("click",run);
+
 // Double Click
 // title.addEventListener("dblclick",run);
 
