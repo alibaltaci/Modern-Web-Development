@@ -10,11 +10,13 @@ const filter = document.getElementById("filter");
 
 // Focus  
 // filter.addEventListener("focus",run);  // odaklanıldığında 
+
 // // Blur
 // filter.addEventListener("blur",run);   // odaktan çıkıldığında 
 
 // Paste 
 // filter.addEventListener("paste",run);    // yapıştırma yapıldığında 
+
 // Copy
 // filter.addEventListener("copy",run);     // kobyalama yapıldığında 
 
@@ -22,11 +24,7 @@ const filter = document.getElementById("filter");
 // filter.addEventListener("cut",run);
 
 // Select
-
 // filter.addEventListener("select",run);
-
-
-
 
 
 function run(e) {
